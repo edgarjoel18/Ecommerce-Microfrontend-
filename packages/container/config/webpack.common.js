@@ -1,3 +1,4 @@
+const HmtlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     module: {
         rules: [
@@ -13,7 +14,12 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new HmtlWebpackPlugin({
+            template: './public/index.html',
+        }),
+    ]
 }
 
 
